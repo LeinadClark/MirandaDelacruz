@@ -5,10 +5,85 @@
     --accent: #0f0f0f;
     --light: #e2ded8d5;
 }
-html , .body
-{
-    scroll-behavior: smooth;
-}
+
+
+/* Glitch Effect */
+html , body {
+    height: 100%;
+    margin: 0;
+ }
+ 
+ .glitch-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #222;
+ }
+ 
+ .glitch {
+    position: relative;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+    letter-spacing: 5px;
+    z-index: 1;
+ }
+ 
+ .glitch:before,
+ .glitch:after {
+    display: block;
+    content: attr(data-glitch);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+ }
+ 
+ .glitch:before {
+    animation: glitch-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    color: #0ff;
+    z-index: -1;
+ }
+ 
+ .glitch:after {
+    animation: glitch-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+    color: #ff00ff;
+    z-index: -2;
+ }
+ 
+ @keyframes glitch-color {
+    0% {
+       transform: translate(0);
+    }
+ 
+    20% {
+       transform: translate(-3px, 3px);
+    }
+ 
+    40% {
+       transform: translate(-3px, -3px);
+    }
+ 
+    60% {
+       transform: translate(3px, 3px);
+    }
+ 
+    80% {
+       transform: translate(3px, -3px);
+    }
+ 
+    to {
+       transform: translate(0);
+    }
+ }
+ 
+/* Glitch Effect */
+
+
 body{
     margin: 0;
     max-width: 100vw;
@@ -33,7 +108,7 @@ header{
     border-bottom: 2px solid var(--fade);
 }
 header .logo{
-    width: 50px;
+    width: 130px;
     height: 50px;
     margin-left: 30px;
     position: relative;
@@ -81,4 +156,59 @@ header ul li a{
     height: 90vh;
     margin-top: 0;
     top: 0;
+}
+
+
+
+
+.modal-content input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    border: 1px solid var(--fade);
+    background-color: var(--accent);
+    color: var(--text);
+    border-radius: 3px;
+}
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(8, 8, 8, 0.5); /* Black w/ opacity */
+    backdrop-filter: blur(5px); /* Apply a blur effect */
+}
+
+.modal-content {
+    background-color: #db5252; /* White background */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888; /* Gray border */
+    width: 300px; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #000000; /* Gray color */
+    float: right; /* Float to the right */
+    font-size: 28px; /* Font size */
+    font-weight: bold; /* Bold font */
+}
+
+/* Show modal when the target is the modal */
+#loginModal:target {
+    display: block; /* Show the modal when it's targeted */
+}
+
+/* Hide the modal when clicking the close link */
+.close:hover,
+.close:focus {
+    color: black; /* Change color on hover */
+    text-decoration: none; /* No underline */
+    cursor: pointer; /* Pointer cursor on hover */
 }

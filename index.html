@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MirandaDelacruz</title>
     <link rel="stylesheet" href="./css/styles.css">
+    
 </head>
 <body>
-    <!-- Hero Page -->
+    <div class="glitch-wrapper">
+        <div class="glitch" data-glitch="DCM COURSES">DCM COURSES</div>
+    </div>
+
     <header>
         <!-- Left Side of Nav Bar -->
         <a href="#hero"><img src="" class="logo" alt="Logo"></a>
@@ -16,11 +20,26 @@
           <li><a href="" id="sign_in">Sign In</a></li>
           <!-- Call to Action Button -->
           <li><a href="" id="enroll_btn">Enroll</a></li>
-          <p>Try</p>
         </ul>
     </header>
+    
+    <!--Login Form -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            <div class="login-card">
+                <h2>Login Page</h2>
+                <h3>Enter Your Credentials</h3>
+                <form class="login-form">
+                    <input type="text" placeholder="Username" required />
+                    <input type="password" placeholder="Password" required />
+                    <a href="#">Forget your password?</a>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <section class="hero"></section>
-    <!-- ? Page -->
-    <!-- ? Page -->
 </body>
 </html>
