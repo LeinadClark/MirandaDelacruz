@@ -142,8 +142,79 @@ header ul li a{
     margin-top: 0;
     top: 0;
 }
-
-
+.banner{
+    background-color: var(--fade);
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    top: 0;
+}
+/*SEC Topics*/
+.topics{
+	position: relative;
+    height: 100vh;
+    top: 0vh;
+	width: 100%;
+    background-color: var(--accent);
+}
+.header{
+    position: absolute;
+    width: 100%;
+}
+#includes{
+    position: relative;
+    text-align: center;
+	color: #fff;
+	font-size: 4rem;
+    font-weight: 700;
+}
+.topic-content{
+	width: 90%;
+	margin: 0px auto;
+    padding-top: 150px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+	gap: 15px;
+	text-align: center;
+}
+.box{
+	padding: 10px;
+	background: var(--accent);
+	border-radius: 15px;
+	transition: all .38s ease;
+    border: 2px solid var(--light);
+}
+.box:hover{
+	transform: translateY(-10px);
+	cursor: pointer;
+}
+.topic-content .text{
+    font-size: 15px;
+    color: var(--light);
+    text-align: left;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 10px;
+}
+.topic-content .text h3{
+    font-size: 25px;
+	font-weight: 600;
+	color: var(--text);
+	margin-bottom: 8px;
+}
+.foot{
+    width: 20vw;
+    position: absolute;
+    height: 10vh;
+    background-color: var(--fade);
+    border: 2px solid var(--light);
+    border-radius: 15px;
+}
+.foot h3{
+    font-size: 20px;
+	font-weight: 700;
+	color: var(--text);
+}
 
 
 .modal-content input {
