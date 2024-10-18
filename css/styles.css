@@ -285,6 +285,9 @@ header ul li a{
     color: var(--text);
     border-radius: 3px;
 }
+.modal-content .input-group {
+    margin-bottom: 20px; /* Add spacing between input fields */
+}
 /* Modal Styles */
 .modal {
     display: none; /* Hidden by default */
@@ -297,22 +300,36 @@ header ul li a{
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(8, 8, 8, 0.5); /* Black w/ opacity */
     backdrop-filter: blur(5px); /* Apply a blur effect */
+    
+    display: flex; /* Use flexbox to center the modal */
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-content {
-    background-color: #db5252; /* White background */
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
+    background-color: #69b7f0; /* Modal background */
+    padding: 40px;
     border: 1px solid #888; /* Gray border */
-    width: 50%; /* Could be more or less, depending on screen size */
+    max-width: 600px; /* Set a reasonable max-width */
+    width: 100%; /* Take the full width available */
+    max-height: 80vh; /* Ensure it stays within the viewport */
+    overflow: hidden; /* Prevent scrolling */
+    box-sizing: border-box; /* Ensure padding doesn't affect the width */
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+    position: relative; /* Add this for positioning inside the modal */
 }
 
 .close {
+    position: absolute;
+    top: 19px; /*position of x*/
+    right: 30px;
     color: #000000; /* Gray color */
     float: right; /* Float to the right */
     font-size: 28px; /* Font size */
     font-weight: bold; /* Bold font */
     text-decoration: none;
+    
 }
 
 /* Show modal when the target is the modal */
@@ -348,7 +365,7 @@ header ul li a{
         .input-group i {
             position: absolute;
             right: 15px;
-            top: 50%;
+            top: 35%;
             transform: translateY(-50%);
             color: white;
         }
@@ -362,16 +379,7 @@ header ul li a{
         .options input {
             margin-right: 5px;
         }
-        .login-btn {
-            background: white;
-            color: #6a11cb;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-size: 16px;
-            cursor: pointer;
-            width: 100%;
-        }
+        
         .register-link {
             color: white;
             font-size: 14px;
