@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DCM | Avail now!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="icon" href="./images/favicon.png" type="image/x-icon">
     <script src="./scripts.js"></script>
+    
     
 </head>
 <body>
@@ -25,13 +27,26 @@
         <div class="modal-content">
             <a href="#" class="close">&times;</a>
             <div class="login-card">
-                <h2>Login Page</h2>
-                <h3>Enter Your Credentials</h3>
+                <h2>Login</h2>
+                
+            
                 <form class="login-form">
-                    <input type="text" placeholder="Username" required />
-                    <input type="password" placeholder="Password" required />
-                    <a href="">Forget your password?</a>
-                    <button type="submit">Login</button>
+                    <input type="text" placeholder="Username">
+            <i class="fas fa-user"></i>
+
+            <input type="password" placeholder="Password">
+            <i class="fas fa-lock"></i>
+    
+            <label><input type="checkbox"> Remember ME</label>
+            <a href="#">Forgot Password</a>
+
+            <div>
+            <button class="login-btn">Login</button>
+        </div>
+            <div class="register-link">
+                Don't have account? <a href="#">Register</a>
+            </div>
+            
                 </form>
             </div>
         </div>
