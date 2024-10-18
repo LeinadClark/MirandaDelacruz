@@ -360,6 +360,9 @@ header ul li a{
     color: var(--text);
     border-radius: 3px;
 }
+.modal-content .input-group {
+    margin-bottom: 20px; /* Add spacing between input fields */
+}
 /* Modal Styles */
 .modal {
     display: none; /* Hidden by default */
@@ -372,22 +375,36 @@ header ul li a{
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(8, 8, 8, 0.5); /* Black w/ opacity */
     backdrop-filter: blur(5px); /* Apply a blur effect */
+    
+    display: flex; /* Use flexbox to center the modal */
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-content {
-    background-color: #db5252; /* White background */
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
+    background-color: #69b7f0; /* Modal background */
+    padding: 40px;
     border: 1px solid #888; /* Gray border */
-    width: 50%; /* Could be more or less, depending on screen size */
+    max-width: 600px; /* Set a reasonable max-width */
+    width: 100%; /* Take the full width available */
+    max-height: 80vh; /* Ensure it stays within the viewport */
+    overflow: hidden; /* Prevent scrolling */
+    box-sizing: border-box; /* Ensure padding doesn't affect the width */
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+    position: relative; /* Add this for positioning inside the modal */
 }
 
 .close {
+    position: absolute;
+    top: 19px; /*position of x*/
+    right: 30px;
     color: #000000; /* Gray color */
     float: right; /* Float to the right */
     font-size: 28px; /* Font size */
     font-weight: bold; /* Bold font */
     text-decoration: none;
+    
 }
 
 /* Show modal when the target is the modal */
@@ -401,3 +418,49 @@ header ul li a{
     color: black; /* Change color on hover */
     cursor: pointer; /* Pointer cursor on hover */
 }
+ 
+        
+        .login-container h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        .input-group {
+            position: relative;
+            margin-bottom: 10px; /*margin of user and password*/
+        }
+        .input-group input {
+            width: 100%;
+           
+            border: none;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.2); 
+            color: white;
+            font-size: 16px;
+        }
+        .input-group i {
+            position: absolute;
+            right: 15px;
+            top: 35%;
+            transform: translateY(-50%);
+            color: white;
+        }
+        .options {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .options input {
+            margin-right: 5px;
+        }
+        
+        .register-link {
+            color: white;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        .register-link a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
