@@ -165,6 +165,18 @@ header ul li a{
     margin-top: 0;
     top: 0;
 }
+.slider .container{
+    position: absolute;
+    height: 40vh;
+    width: 35vw;
+    border: 1px solid red;
+    top: 100px;
+    right: 15%;
+}
+.container .video{
+    height: 100%;
+    width: 100%;
+}
 .carousel{
     border: 2px solid white;
     height: 90vh;
@@ -204,9 +216,16 @@ header ul li a{
 .banner .text{
     position: absolute;
     color: var(--text);
-    margin: 5vh 10vw;
+    margin: 3vh 10vw;
     font-size: 1.5rem;
     max-width: 80%;
+}
+.banner .text span{
+    text-shadow: 0px 0px 5px var(--accent) ;
+}
+.banner .text .contactbtn{
+    text-decoration: none;
+    transition: 400ms;
 }
 /*SEC Topics*/
 .topics{
