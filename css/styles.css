@@ -326,3 +326,58 @@ header ul li a{
     color: black; /* Change color on hover */
     cursor: pointer; /* Pointer cursor on hover */
 }
+ 
+        
+        .login-container h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        .input-group {
+            position: relative;
+            margin-bottom: 10px; /*margin of user and password*/
+        }
+        .input-group input {
+            width: 100%;
+           
+            border: none;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.2); 
+            color: white;
+            font-size: 16px;
+        }
+        .input-group i {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+        }
+        .options {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .options input {
+            margin-right: 5px;
+        }
+        .login-btn {
+            background: white;
+            color: #6a11cb;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .register-link {
+            color: white;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        .register-link a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
