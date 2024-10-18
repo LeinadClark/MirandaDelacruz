@@ -165,6 +165,10 @@ header ul li a{
     margin-top: 0;
     top: 0;
 }
+.carousel{
+    border: 2px solid white;
+    height: 90vh;
+}
 /* Banner */
 .banner{
     background-color: var(--base);
