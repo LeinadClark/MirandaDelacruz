@@ -168,6 +168,30 @@ header ul li a{
 .carousel{
     border: 2px solid white;
     height: 90vh;
+    color: wheat;
+}
+.slider{
+    height: 100%;
+    display: flex;
+    width: 400%;
+    transition: all 0s;
+}
+.slider section{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.controls .arrow{
+    position: absolute;
+    top: 45%;
+    cursor: pointer;
+}
+.arrow.left{
+    left: 10px;
+}
+.arrow.right{
+    right: 10px;
 }
 /* Banner */
 .banner{
