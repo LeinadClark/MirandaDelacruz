@@ -24,11 +24,24 @@ window.addEventListener("scroll", function () {
     lastScrollY = window.scrollY;
 });
 
-// Hero Page Controls
-const slider = document.querySelector('.slider');
-const leftArrow = document.querySelector('.left');
-const rightArrow = document.querySelector('.right');
+// Hero Page Slider
+let currentSlide = 0;
 
-rightArrow.addEventListener('click', function() {
-    slider.style.transform = 'translate(-25%)';
-});
+function changeSlide(direction) {
+    const slides = document.querySelectorAll('.slide');
+    slides[currentSlide].classList.remove('active');
+
+    currentSlide += direction;
+
+    if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
+    } else if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    }
+
+    slides[currentSlide].classList.add('active');
+    document.querySelector('.slides').style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+}
+
+// Initialize the first slide
+changeSlide(0);
