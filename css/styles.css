@@ -27,65 +27,6 @@ header {
 a{
     color: var(--text);
 }
- /* Glitch Effect */
- .glitch-wrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: #222;
- }
- 
- .glitch {
-    position: relative;
-    font-size: 80px;
-    font-weight: 700;
-    line-height: 1.2;
-    color: #fff;
-    letter-spacing: 5px;
-    z-index: 1;
- }
- 
- .glitch:before,
- .glitch:after {
-    display: block;
-    content: attr(data-glitch);
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.8;
- }
- 
- .glitch:before {
-    animation: glitch-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
-    color: #0ff;
-    z-index: -1;
- }
- 
- .glitch:after {
-    animation: glitch-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
-    color: #ff00ff;
-    z-index: -2;
- }
- 
- @keyframes glitch-color {
-    0% {
-       transform: translate(0);
-    }
- 
-    20% {
-       transform: translate(0px, 4px);
-    }
- 
-    40% {
-       transform: translate(0px, -4px);
-    }
-    to {
-       transform: translate(0);
-    }
- }
 /*SEC Header*/
 header{
      position: fixed;
@@ -158,7 +99,7 @@ header ul li a{
 }
 /* Hero Page */
 .hero{
-    background-color: var(--base);
+    background-color: #000000;
     position: relative;
     width: 100%;
     height: 95vh;
@@ -167,36 +108,125 @@ header ul li a{
 }
 .slider {
     position: relative;
+    top: 25px;
     width: 95%;
     height: 95%;
-    margin: auto;
+    margin: 0 auto;
     overflow: hidden;
-    border: 1px solid #ccc;
-    border-radius: 10px;
 }
-
 .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
-
 .slide {
     min-width: 100%;
-    box-sizing: border-box;
-    padding: 20px;
-    background: #f1f1f1;
-    text-align: center;
+    background: transparent;
+    position: relative;
+    height: 91vh;
 }
-
+.slides .heading{
+    position: relative;
+    top: 7%;
+    left: 9%;
+    max-width: 26vw;
+    color: #fff;
+    font-size: 2.7rem;
+}
+.slides .subtitle{
+    position: relative;
+    top: 15px;
+    left: 9%;
+    width: 30vw;
+}
+.slides .subtitle .line{
+    position: relative;
+    height: 5vh;
+    width: 5px;
+    background-color: var(--accent);
+    position: relative;
+}
+.slides .subtitle .subtext{
+    position: absolute;
+    top: 5px;
+    left: 15px;
+}
+.glitch {
+    position: relative;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    z-index: 1;
+ }
+ .glitch:before,
+ .glitch:after {
+    display: block;
+    content: attr(data-glitch);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+ }
+ .glitch:before {
+    animation: glitch-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    color: #0ff;
+    z-index: -1;
+ }
+ .glitch:after {
+    animation: glitch-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+    color: #ff00ff;
+    z-index: -2;
+ }
+ @keyframes glitch-color {
+    0% {
+       transform: translate(0);
+    }
+ 
+    20% {
+       transform: translate(0px, 3px);
+    }
+ 
+    40% {
+       transform: translate(0px, -3px);
+    }
+    to {
+       transform: translate(0);
+    }
+ }
+.slides .description{
+    position: relative;
+    color: var(--text);
+    top: 35px;
+    width: 25vw;
+    left: 9%;
+}
+.videocontain{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50vw;
+    height: 65vh;
+    z-index: 1;
+    transform: translate(-21%, -55%);
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px var(--accent);
+}
+.video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(255, 255, 255, 0.8);
     border: none;
-    padding: 10px;
+    padding: 25px 35px 25px 35px;
     cursor: pointer;
     border-radius: 50%;
+    font-size: 20px;
+    z-index: 10;
 }
 
 .left {
@@ -294,6 +324,7 @@ header ul li a{
     background-color: var(--base);
     border: 2px solid var(--text);
     border-radius: 15px;
+    margin-left: 70px;
 }
 .foot h3{
     font-size: 20px;
@@ -326,12 +357,15 @@ header ul li a{
 }
 
 .modal-content {
-    background-color: #69b7f0; /* White background */
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 40px;
-    border: 1px solid #888; /* Gray border */
-    width:max-content; /* Adjust Mid*/
-    
+    background-color: var(--black); /* Dark modal background */
+    margin: 10% auto; 
+    padding: 30px;
+    border: 2px solid var(--accent); 
+    width: 60%; 
+    max-width: 430px; /*modal bar width - leinad*/
+    border-radius: 10px;
+    color: var(--text); 
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .close {
@@ -342,9 +376,21 @@ header ul li a{
     text-decoration: none;
 }
 
+#enrollModal:target{
+    display: block;
+}
 /* Show modal when the target is the modal */
 #loginModal:target {
     display: block; /* Show the modal when it's targeted */
+    backdrop-filter: blur(20);
+}
+.login-card h2 {
+    padding-left: 35%;
+}
+.login-card {
+    max-width: 300px; /* Set the desired max width */
+    margin: auto; /* Center the card horizontally */
+    
 }
 
 /* Hide the modal when clicking the close link */
@@ -354,11 +400,24 @@ header ul li a{
     cursor: pointer; /* Pointer cursor on hover */
 }
  
-        
-        .login-container h2 {
-            color: white;
-            margin-bottom: 20px;
-        }
+/* Style the login button */
+.login-btn {
+    background-color: #539acd; /* Primary color */
+    color: #ffffff; /* White text */
+    padding: 10px 40px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 30px; /* Rounded corners */
+    font-size: 16px; 
+    font-weight: 500;
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/*hover effect */
+.login-btn:hover {
+    background-color: #1f90db; 
+}
+       
         .input-group {
             position: relative;
             margin-bottom: 10px; /*margin of user and password*/
@@ -379,16 +438,6 @@ header ul li a{
             transform: translateY(-50%);
             color: white;
         }
-        .options {
-            display: flex;
-            justify-content: space-between;
-            color: white;
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-        .options input {
-            margin-right: 5px;
-        }
         
         .register-link {
             color: white;
@@ -399,3 +448,86 @@ header ul li a{
             color: #ffcc00;
             text-decoration: none;
         }
+
+/*Enroll Card*/
+.enroll-card {
+    background-color: #2c2c2c; /* Dark background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    max-width: 400px; /* Limits the width */
+    margin: 20px auto; /* Center the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    color: #fff; /* White text for contrast */
+}
+
+.enroll-card h2 {
+    font-size: 10px; /* Larger font for heading */
+    text-align: center; /* Center-align the heading */
+    margin-bottom: 30px; /* Add space below the heading */
+    color: #f2efea; /* Custom color for the heading */
+    text-transform: uppercase; /* Makes the text uppercase */
+    letter-spacing: 2px; /* Adds some space between letters */
+}
+
+a {
+    text-decoration: none; /*Modal Link Underline Removed*/
+}
+
+#webDevModal:target,
+#responsiveDesignModal:target,
+#uxUiModal:target {
+    display: block;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(10, 10, 10, 0.7); /* Dark semi-transparent background */
+    backdrop-filter: blur(5px); 
+}
+
+
+/* Modal Header */
+.modal-header h2 {
+    font-size: 24px; 
+    color: var(--accent);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Modal Body */
+.modal-body p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+/* Close Button */
+.close {
+    color: var(--fade); 
+    float: right;
+    font-size: 28px; 
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--accent); 
+    cursor: pointer; 
+}
+
+/* Adjust footnote text */
+.foot h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+}

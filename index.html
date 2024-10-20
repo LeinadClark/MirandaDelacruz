@@ -7,81 +7,208 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="icon" href="./images/favicon.png" type="image/x-icon">
-    <script src="./scripts.js"></script>
-    
-    
+    <script src="./scripts.js" defer></script> <!-- Ensure JS loads after DOM -->
 </head>
 <body>
+
     <header>
         <!-- Left Side of Nav Bar -->
         <a href="#hero"><img src="./images/logo2.png" class="logo" alt="Logo"></a>
+        
         <!-- Right Side of Nav Bar using Flexbox -->
-         <ul>
-          <li><a href="" id="sign_in">Sign In</a></li>
-          <!-- Call to Action Button -->
-          <li><a href="#loginModal" id="enroll_btn">Enroll</a></li>
+        <ul>
+            <li><a href="#loginModal" id="sign_in">Sign In</a></li>
+            <!-- Call to Action Button -->
+            <li><a href="#enrollModal" id="enroll_btn">Enroll</a></li>
         </ul>
     </header>
-    <!--Login Form -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <a href="#" class="close">&times;</a>
-            <div class="login-card">
-                <h2>Login</h2>
-                
-            
-                <div class="login-form">
-                    <input type="text" placeholder="Username">
-            <i class="fas fa-user"></i>
-    </div>
 
-<div class="input-group">
-            <input type="password" placeholder="Password">
-            <i class="fas fa-lock"></i>
-</div>
+    <!--Login Modal-->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <a href="#" class="close">&times;</a>
 
-<div class ="options">
-            <label><input type="checkbox"> Remember ME</label>
-            <a href="#">Forgot Password</a>
-</div>
-            
-            <button class="login-btn">Login</button>
-        
-            <div class="register-link">
-                Don't have account? <a href="#">Register</a>
+        <div class="login-card">
+            <h2>Login</h2>
+            <div class="input-group">
+                <input type="text" placeholder="Username">
+                <i class="fas fa-user"></i>
             </div>
-            
-        </diV>
+            <div class="input-group">
+                <input type="password" placeholder="Password">
+                <i class="fas fa-lock"></i>
+            </div>
+            <button class="login-btn">Login</button>
+            <div class="register-link">
+                Don't have an account? <a href="#">Register</a>
             </div>
         </div>
+        
     </div>
-    <!-- <video class="video" autoplay loop muted>
-        <source src="Videos/Graphic Designing lach 7117911 3 _ Stock Video Junction.mp4" type="video/mp4">
-      </video> -->
+</div>
+    <!-- Enrollment Modal -->
+<div id="enrollModal" class="modal">
+    <div class="modal-content">
+        <a href="#" class="close">&times;</a>
+        
+        <div class="enroll-card">
+            <h2>Add New Card</h2>
+            
+            <div class="input-group">
+                <input type="email" placeholder="1234 5678 1234 4234">
+                <i class="fas fa-envelope"></i>
+            </div>
+
+            <div class="input-group">
+                <input type="EDate" placeholder="Expiry Date">
+                <i class="fas fa-envelope"></i>
+                </div>
+            <div class="input-group">
+                <input type="CVV" placeholder="CVV">
+                <i class="fas fa-phone"></i>
+            </div>
+            <div class="input-group">
+                <input type="Name" placeholder="Name">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="input-group">
+                <select>
+                    <option value="">Select Course</option>
+                    <option value="web-development">Introduction to Web Development</option>
+                    <option value="responsive-design">Responsive Web Design</option>
+                    <option value="ux-ui">Advanced UX/UI Design</option>
+                </select>
+            </div>
+            <button class="enroll-btn">Submit Enrollment</button>
+        </div>
+    </div>
+</div>
+
+<!-- Hero Section -->
     <section class="hero">
         <div class="slider">
             <div class="slides">
-                <div class="slide active">
-                    <h2>Slide 1</h2>
-                    <p>This is the content for slide 1.</p>
+
+                <!-- SLIDE 1 -->
+                <div class="slide active" id="slide1">
+                    <!-- Left Side - Text -->
+                    <div class="heading">
+                        <h2> DCM Courses</h2>
+                    </div>
+                    <!-- Subtitle -->
+                    <div class="subtitle">
+                        <div class="line"></div>
+
+                        <!-- Glitch Text -->
+                        <div class="subtext">
+                            <div class="glitch" data-glitch="Your CyberDesign Teacher">Your CyberDesign Teacher</div>
+                        </div>
+                    </div>
+                    <!-- Description -->
+                    <div class="description">
+                        <p>We are dedicated to foster learning and engage you with the right mentors</p>
+                    </div>
+
+                    <!-- Right Side - Video -->
+                    <div class="videocontain">
+                        <video class="video" autoplay loop muted>
+                            <source src="Videos/Cyberpunk City Alley - Unreal Engine 4.mp4" type="video/mp4">
+                        </video>
+                    </div>
                 </div>
-                <div class="slide">
-                    <h2>Slide 2</h2>
-                    <p>This is the content for slide 2.</p>
+
+                <!-- SLIDE 2 -->
+                <div class="slide" id="slide2">
+                    <!-- Left Side - Text -->
+                    <div class="heading">
+                        <h2> Designing Basics.</h2>
+                    </div>
+                    <!-- Subtitle -->
+                    <div class="subtitle">
+                        <div class="line"></div>
+
+                        <!-- Glitch Text -->
+                        <div class="subtext">
+                            <div class="glitch" data-glitch="Graphic Design Fundamentals">Graphic Design Fundamentals</div>
+                        </div>
+                    </div>
+                    <!-- Description -->
+                    <div class="description">
+                        <p>We are dedicated to foster learning and engage you with the right mentors</p>
+                    </div>
+
+                    <!-- Right Side - Video -->
+                    <div class="videocontain">
+                        <video class="video" autoplay loop muted>
+                            <source src="Videos/Graphic Designing lach 7117911 3 _ Stock Video Junction.mp4" type="video/mp4">
+                        </video>
+                    </div>
                 </div>
-                <div class="slide">
-                    <h2>Slide 3</h2>
-                    <p>This is the content for slide 3.</p>
+
+                <!-- SLIDE 3 -->
+                <div class="slide" id="slide3">
+                    <!-- Left Side - Text -->
+                    <div class="heading">
+                        <h2> Advanced Branding.</h2>
+                    </div>
+                    <!-- Subtitle -->
+                    <div class="subtitle">
+                        <div class="line"></div>
+                        
+                        <!-- Glitch Text -->
+                        <div class="subtext">
+                            <div class="glitch" data-glitch="Branding and Identity Design">Branding and Identity Design</div>
+                        </div>
+                    </div>
+                    <!-- Description -->
+                    <div class="description">
+                        <p>We are dedicated to foster learning and engage you with the right mentors</p>
+                    </div>
+
+                    <!-- Right Side - Video -->
+                    <div class="videocontain">
+                        <video class="video" autoplay loop muted>
+                            <source src="Videos/Minimal 3d Laptop Web Promo (After Effects template).mp4" type="video/mp4">
+                        </video>
+                    </div>
                 </div>
-                <div class="slide">
-                    <h2>Slide 4</h2>
-                    <p>This is the content for slide 4.</p>
+
+                <!-- SLIDE 4 -->
+                <div class="slide" id="slide4">
+                    <!-- Left Side - Text -->
+                    <div class="heading">
+                        <h2>User Interface.</h2>
+                    </div>
+                    <!-- Subtitle -->
+                    <div class="subtitle">
+                        <div class="line"></div>
+
+                        <!-- Glitch Text -->
+                        <div class="subtext">
+                            <div class="glitch" data-glitch="Appealing and User-friendly UI">Appealing and User-friendly UI</div>
+                        </div>
+                    </div>
+                    <!-- Description -->
+                    <div class="description">
+                        <p>We are dedicated to foster learning and engage you with the right mentors</p>
+                    </div>
+
+                    <!-- Right Side - Video -->
+                    <div class="videocontain">
+                        <video class="video" autoplay loop muted>
+                            <source src="Videos/Web Design Promotional Video - After Effects Template.mp4" type="video/mp4">
+                        </video>
+                    </div>
                 </div>
             </div>
+
             <button class="arrow left" onclick="changeSlide(-1)">&#10094;</button>
             <button class="arrow right" onclick="changeSlide(1)">&#10095;</button>
+
         </div>        
     </section>
+
+<!-- Banner Part -->
     <div class="banner">
         <div class="text">
             <h3> Hello there! We are <span>DCM </span>based in Silicon Valley. Providing you Quality Education about Recognizable Branding, Graphic and Interface Designing.</h3>
@@ -90,49 +217,118 @@
             </div>
         </div>
     </div>
+
+<!-- Topics Section-->
         <div class="topics">
             <div class="header">
                 <h1 id="includes"> DCM Courses</h1>
             </div>
             <div class="topic-content">
+              
                 <!-- 1st Box -->
                 <div class="box">
+                    <a href="#webDevModal">
                     <div class="text">
-                        <h3>Introduction to Web Development</h3>
-                        <p>Dive into the fundamentals of web design, learning the building blocks of websites including HTML, CSS, and JavaScript. This course covers the basics of coding, how to create simple web pages, and understanding web standards. Perfect for beginners looking to start their journey in web development.</p>
+                        <h3> Fundamentals of Graphic Design</h3>
+                        <p>This introductory course covers the basics of graphic design, including color theory, typography, and composition. Students will learn essential design principles and tools like Adobe Illustrator and Photoshop.</p>
                     </div>
+                </a>
                     <!-- Box Footer -->
                     <div class="foot">
-                        <h3>Beginner Phase</h3>
+                        <h3> $199 Per Week</h3>
                     </div>
                 </div>
+
                 <!-- 2nd Box -->
                 <div class="box">
+                    <a href="#responsiveDesignModal">
                     <div class="text">
-                        <h3>Responsive Web Design</h3>
-                        <p>In this course, students learn how to create websites that look great on any device, from desktops to smartphones. It covers concepts such as fluid grids, flexible images, and media queries, teaching how to ensure a seamless user experience across different screen sizes and resolutions.</p>
+                        <h3> Advanced Branding and Identity Design</h3>
+                        <p> Dive into the world of branding with this advanced course. Students will explore logo design, brand development, and creating cohesive visual identities. Practical projects will help build a professional portfolio. </p>
                     </div>
+                </a>
                     <!-- Box Footer -->
                     <div class="foot" id="intermediate">
-                        <h3>Intern Level</h3>
+                        <h3>$299 Per Week</h3>
                     </div>
                 </div>
                 <!-- 3rd Box -->
                 <div class="box">
+                    <a href="#uxUiModal">
                     <div class="text">
-                        <h3>Advanced UX/UI Design</h3>
-                        <p>Focused on the principles of user experience (UX) and user interface (UI) design, this course delves into advanced techniques for creating intuitive, user-friendly websites. Topics include user research, wireframing, prototyping, and visual design elements. Students will learn how to craft engaging and accessible interfaces that enhance user satisfaction.</p>
+                        <h3>Web and User Interface Design</h3>
+                        <p>Focused on designing for the web, this course teaches students how to create visually appealing and user-friendly websites. Topics include wireframing, prototyping, and responsive design using tools like Figma and Sketch.</p>
                     </div>
+                </a>
                     <!-- Box Footer -->
                     <div class="foot" id="difficult">
-                        <h3>A Professional</h3>
+                        <h3>$249 Per week</h3>
                     </div>
                 </div>
             </div>
         </div>
-    <div class="glitch-wrapper">
-        <div class="glitch" data-glitch="DCM COURSES">DCM COURSES</div>
+
+        <!-- Modal for Introduction to Web Development -->
+<div id="webDevModal" class="modal">
+    <div class="modal-content">
+        <a href="#close" class="close">&times;</a>
+        <h2>Fundamentals of Graphic Design</h2>
+     <p><strong>Price:</strong> $199 for a 6-week course</p>
+        <h3>Course Outline</h3>
+        <ul>
+            <li><strong>Week 1:</strong> Introduction to Graphic Design</li>
+            <li><strong>Week 2:</strong> Color Theory</li>
+            <li><strong>Week 3:</strong> Typography Fundamentals</li>
+            <li><strong>Week 4:</strong> Layout and Composition</li>
+            <li><strong>Week 5:</strong> Introduction to Design Tools</li>
+            <li><strong>Week 6:</strong> Final Project and Presentation</li>
+        </ul>
     </div>
+</div>
+
+<!-- Modal for Responsive Web Design -->
+<div id="responsiveDesignModal" class="modal">
+    <div class="modal-content">
+        <a href="#close" class="close">&times;</a>
+        <h2>Advanced Branding and Identity Design</h2>
+        <p><strong>Price:</strong> $299 for an 8-week course</p>
+        <h3>Course Outline</h3>
+        <ul>
+            <li><strong>Week 1:</strong> The Foundations of Branding</li>
+            <li><strong>Week 2:</strong> Logo Design Principles</li>
+            <li><strong>Week 3:</strong> Brand Identity Development</li>
+            <li><strong>Week 4:</strong> Typography and Color in Branding</li>
+            <li><strong>Week 5:</strong> Creating Brand Assets</li>
+            <li><strong>Week 6:</strong> Brand Storytelling and Messaging</li>
+            <li><strong>Week 7:</strong> Final Brand Identity Presentation</li>
+            <li><strong>Week 8:</strong> Portfolio Development</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Modal for Advanced UX/UI Design -->
+<div id="uxUiModal" class="modal">
+    <div class="modal-content">
+        <a href="#close" class="close">&times;</a>
+        <h2>Web and User Interface Design</h2>
+       
+        <p><strong>Price:</strong> $249 for a 7-week course</p>
+        <h3>Course Outline</h3>
+        <ul>
+            <li><strong>Week 1:</strong> Introduction to Web Design</li>
+            <li><strong>Week 2:</strong> User Experience (UX) Design Basics</li>
+            <li><strong>Week 3:</strong> Visual Design and Interface Design</li>
+            <li><strong>Week 4:</strong> Responsive Design Principles</li>
+            <li><strong>Week 5:</strong> Interaction and Animation</li>
+            <li><strong>Week 6:</strong> Web Design Project Development</li>
+            <li><strong>Week 7:</strong> Final Presentation and Portfolio Review</li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+
+</footer>
 
 </body>
 </html>
