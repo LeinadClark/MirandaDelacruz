@@ -571,6 +571,7 @@ a {
     font-size: 28px; 
     font-weight: bold;
     text-decoration: none;
+    margin-top: -10px;
 }
 
 .close:hover,
