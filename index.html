@@ -47,45 +47,47 @@
     </div>
 </div>
     <!-- Enrollment Modal -->
-<div id="enrollModal" class="modal">
-    <div class="modal-content">
-        <a href="#" class="close">&times;</a>
-        
-        <div class="enroll-card">
-            <h2>Add New Card</h2>
+    <div id="enrollModal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
             
-            <div class="input-group">
-                <input type="email" placeholder="1234 5678 1234 4234">
-                <i class="fas fa-envelope"></i>
-            </div>
-
-            <div class="input-group">
-                <input type="EDate" placeholder="Expiry Date">
-                <i class="fas fa-envelope"></i>
-                </div>
-            <div class="input-group">
-                <input type="CVV" placeholder="CVV">
-                <i class="fas fa-phone"></i>
-            </div>
-            <div class="input-group">
-                <input type="Name" placeholder="Name">
-                <i class="fas fa-envelope"></i>
-            </div>
-            <div class="input-group">
-                <select>
-                    <option value="">Select Course</option>
-                    <option value="web-development">Introduction to Web Development</option>
-                    <option value="responsive-design">Responsive Web Design</option>
-                    <option value="ux-ui">Advanced UX/UI Design</option>
-                </select>
-            </div>
-            <button class="enroll-btn">Submit Enrollment</button>
+           <div class="input-group">
+            <label for="card-number">Card Number</label> <!-- Label for Card Number -->
+            <input type="text" id="card-number" placeholder="1234 5678 1234 4234">
+        </div>
+    
+        <div class="input-group">
+            <label for="expiry-date">Expiry Date</label> <!-- Label for Expiry Date -->
+            <input type="text" id="expiry-date" placeholder="MM/YY">
+        </div>
+    
+        <div class="input-group">
+            <label for="cvv">CVV</label> <!-- Label for CVV -->
+            <input type="text" id="cvv" placeholder="CVV">
+        </div>
+    
+        <div class="input-group">
+            <label for="name-on-card">Name on Card</label> <!-- Label for Name -->
+            <input type="text" id="name-on-card" placeholder="Name">
+        </div>
+    
+        <div class="input-group">
+            <label for="course-select">Select Course</label> <!-- Label for Select Course -->
+            <select id="course-select">
+                <option value="graphic-design">Fundamentals of Graphic Design</option>
+                <option value="branding-design">Advanced Branding and Identity Design</option>
+                <option value="ux-ui">Web and User Interface Design</option>
+            </select>
+        </div>
+    
+        <button class="enroll-btn">Submit Enrollment</button>
+       
+    </div>
         </div>
     </div>
-</div>
 
 <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="slider">
             <div class="slides">
 
@@ -106,8 +108,9 @@
                     </div>
                     <!-- Description -->
                     <div class="description">
-                        <p>We are dedicated to foster learning and engage you with the right mentors</p>
+                        <p>Unlock your creative potential with DCM. Join and transform your passion into stunning visual creations that captivate and inspire!</p>
                     </div>
+                    <a href="#enrollModal" class="btn">Join the Community</a>
 
                     <!-- Right Side - Video -->
                     <div class="videocontain">
@@ -134,8 +137,9 @@
                     </div>
                     <!-- Description -->
                     <div class="description">
-                        <p>We are dedicated to foster learning and engage you with the right mentors</p>
+                        <p>Dive into the world of creativity with our Fundamentals of Graphic Design online course.</p>
                     </div>
+                    <a href="#enrollModal" class="btn">Join the Community</a>
 
                     <!-- Right Side - Video -->
                     <div class="videocontain">
@@ -162,9 +166,9 @@
                     </div>
                     <!-- Description -->
                     <div class="description">
-                        <p>We are dedicated to foster learning and engage you with the right mentors</p>
+                        <p>Transform your vision into reality with our Branding and Identity Design online course.</p>
                     </div>
-
+                    <a href="#enrollModal" class="btn">Join the Community</a>
                     <!-- Right Side - Video -->
                     <div class="videocontain">
                         <video class="video" autoplay loop muted>
@@ -190,8 +194,9 @@
                     </div>
                     <!-- Description -->
                     <div class="description">
-                        <p>We are dedicated to foster learning and engage you with the right mentors</p>
+                        <p>Unlock the secrets of effective digital design with our Web and User Interface Design online course.</p>
                     </div>
+                    <a href="#enrollModal" class="btn">Join the Community</a>
 
                     <!-- Right Side - Video -->
                     <div class="videocontain">
@@ -213,7 +218,7 @@
         <div class="text">
             <h3> Hello there! We are <span>DCM </span>based in Silicon Valley. Providing you Quality Education about Recognizable Branding, Graphic and Interface Designing.</h3>
             <div class="btn">
-            <a href="#" class="contactbtn" id="enroll_btn">Contact Us</a>
+            <a href="#footer" class="contactbtn" id="enroll_btn">Contact Us</a>
             </div>
         </div>
     </div>
@@ -326,8 +331,15 @@
     </div>
 </div>
 
-<footer>
-
+<footer id="footer">
+    <div class="footer-content">
+        <ul class="social-links">
+            <li><a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#" class="social-icon"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#" class="social-icon"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+    </div>
 </footer>
 
 </body>
