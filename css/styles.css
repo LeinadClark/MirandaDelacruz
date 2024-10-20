@@ -356,6 +356,37 @@ header ul li a{
     font-weight: 700;
     color: var(--text);
 }
+
+/* Footer */
+#footer {
+    background-color: #000000;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    color: cyan;
+    text-decoration: none;
+    font-size: 30px;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #00bfff; /* Lighter cyan on hover */
+}
 /* Enroll Form */
 .modal-content input {
     width: 97%;
@@ -578,35 +609,4 @@ a {
 .close:focus {
     color: var(--accent); 
     cursor: pointer; 
-}
-
-/* Footer */
-#footer {
-    background-color: #000000;
-    text-align: center;
-    padding: 40px 0;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.social-links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.social-icon {
-    color: cyan;
-    text-decoration: none;
-    font-size: 30px;
-    transition: color 0.3s;
-}
-
-.social-icon:hover {
-    color: #00bfff; /* Lighter cyan on hover */
 }
